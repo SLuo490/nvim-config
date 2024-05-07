@@ -10,7 +10,14 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    {
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins",
+      opts = {
+        colorscheme = "solarized-osaka",
+      },
+    },
+
     -- import any extras modules here
     { import = "plugins.extras.lang.flutter" },
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
