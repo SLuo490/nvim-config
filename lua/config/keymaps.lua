@@ -9,3 +9,8 @@ vim.api.nvim_set_keymap(
   ":ToggleTerm direction=horizontal <CR>",
   { desc = "Open horizontal terminal split" }
 )
+
+-- Flutter Tools
+vim.api.nvim_set_keymap("n", "<leader>Fe", ":FlutterEmulators <CR>", { desc = "Flutter Emulators" })
+vim.api.nvim_set_keymap("n", "<leader>Fr", ":FlutterRun <CR>", { desc = "Flutter Run" })
+vim.api.nvim_set_keymap("n", "<leader>Fq", ":FlutterQuit <CR>", { desc = "Flutter Quit" })
