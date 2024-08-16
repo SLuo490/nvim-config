@@ -10,6 +10,7 @@ vim.api.nvim_set_keymap("n", "<leader>t2", ":2ToggleTerm <CR>", { desc = "Open S
 vim.api.nvim_set_keymap("n", "<leader>Fe", ":FlutterEmulators <CR>", { desc = "Flutter Emulators" })
 vim.api.nvim_set_keymap("n", "<leader>Fr", ":FlutterRun <CR>", { desc = "Flutter Run" })
 vim.api.nvim_set_keymap("n", "<leader>Fq", ":FlutterQuit <CR>", { desc = "Flutter Quit" })
+vim.api.nvim_set_keymap("n", "<leader>Fc", ":FlutterCopyProfilerUrl <CR>", { desc = "Flutter Copy Profiler URL" })
 
 -- Split Window
 vim.api.nvim_set_keymap("n", "sv", ":split <CR>", { desc = "Split Vertical" })
