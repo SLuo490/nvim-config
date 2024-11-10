@@ -35,16 +35,8 @@ return {
       vim.opt.foldlevelstart = 99
     end,
     opts = {
-      provider_selector = function(_, ft, buftype)
-        -- PERF disable folds on `log`, and only use `indent` for `bib` files
-        if ft == "log" then
-          return ""
-        end
-        -- ufo accepts only two kinds as priority, see https://github.com/kevinhwang91/nvim-ufo/issues/256
-        if ft == "" or buftype ~= "" or vim.startswith(ft, "git") or ft == "applescript" then
-          return "indent"
-        end
-        return { "lsp", "treesitter" }
+      provider_selector = function(bufnr, filetype, buftype)
+        return { "treesitter", "indent" }
       end,
     },
   },
